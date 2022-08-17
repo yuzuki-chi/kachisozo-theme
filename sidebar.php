@@ -1,9 +1,17 @@
+<?php
+
+/**
+ * sidebar.php
+ * サイドバー用のコンポーネント
+ * 他のPHPファイルで, get_sidebar() を呼び出すと挿入される. 
+ */
+?>
 <aside id="sidebar" role="complementary">
-<?php if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
-<div id="primary" class="widget-area">
-<ul class="xoxo">
-<?php dynamic_sidebar( 'primary-widget-area' ); ?>
-</ul>
-</div>
-<?php endif; ?>
+    <?php if (is_active_sidebar('primary-widget-area')) : ?>
+        <div id="primary" class="widget-area">
+            <ul class="xoxo">
+                <?php dynamic_sidebar('primary-widget-area'); ?>
+            </ul>
+        </div>
+    <?php endif; ?>
 </aside>
